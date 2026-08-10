@@ -127,6 +127,17 @@
     .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
     .float-cta { position: fixed; bottom: 28px; right: 28px; background: var(--green); color: #fff; border-radius: 30px; padding: 13px 22px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.88rem; text-decoration: none; box-shadow: 0 6px 28px rgba(46,204,64,0.45); display: flex; align-items: center; gap: 8px; z-index: 999; transition: transform 0.2s; }
     .float-cta:hover { transform: translateY(-2px); }
+
+    /* DROPDOWN */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 4px; }
+    .nav-dropdown > a::after { content: '\25BE'; font-size: 0.7rem; }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.13); min-width: 230px; z-index: 1100; padding: 8px 0; border: 1px solid #eaf0fb; }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: flex; align-items: center; gap: 10px; padding: 10px 18px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.82rem; color: var(--navy); text-decoration: none; transition: background 0.15s; border-radius: 0; }
+    .nav-dropdown-menu a:hover { background: var(--light-bg); color: var(--blue); }
+    .nav-dropdown-menu .dm-icon { font-size: 1rem; flex-shrink: 0; }
+    .nav-dropdown-menu .dm-divider { height: 1px; background: #eaf0fb; margin: 6px 0; }
   </style>
 </head>
 <body>
@@ -155,7 +166,19 @@
     </a>
     <nav>
       <a href="index.html">Home</a>
+      <div class="nav-dropdown">
       <a href="services.html">Services</a>
+      <div class="nav-dropdown-menu">
+        <a href="air-duct-cleaning.html"><span class="dm-icon">&#127788;</span> Air Duct Cleaning</a>
+        <a href="dryer-vent-cleaning.html"><span class="dm-icon">&#127744;</span> Dryer Vent Cleaning</a>
+        <a href="hvac-cleaning.html"><span class="dm-icon">&#10052;</span> HVAC System Cleaning</a>
+        <a href="mold-remediation.html"><span class="dm-icon">&#128268;</span> Mold Remediation</a>
+        <a href="commercial-cleaning.html"><span class="dm-icon">&#127970;</span> Commercial Cleaning</a>
+        <a href="sanitization.html"><span class="dm-icon">&#10024;</span> Sanitization &amp; Deodorizing</a>
+        <div class="dm-divider"></div>
+        <a href="services.html"><span class="dm-icon">&#128196;</span> All Services</a>
+      </div>
+    </div>
       <a href="about.html" class="active">About Us</a>
       <a href="pricing.html">Pricing</a>
       <a href="contact.html" class="btn-quote">Get Free Quote</a>
